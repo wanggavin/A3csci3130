@@ -1,0 +1,19 @@
+{
+  "rules": {
+    ".read": "true",
+    ".write": "true",
+    ".create":"true",
+    "contacts": {
+            "$contact": {
+                "name": {
+                    ".validate": "newData.isString() && newData.val().length < 50 && newData.val().length > 2"
+                },
+                "email": {
+                    ".validate": "newData.isString() && newData.val().matches(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}$/i)"
+                }
+
+
+            }
+        }
+  }
+}
