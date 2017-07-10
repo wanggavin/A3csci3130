@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
         //Get the app wide shared variables
         MyApplicationData appData = (MyApplicationData)getApplication();
 
-        //Set-up Firebase
+        //Set-up Firebase 
         appData.firebaseDBInstance = FirebaseDatabase.getInstance();
         appData.firebaseReference = appData.firebaseDBInstance.getReferenceFromUrl("https://a4-84d55.firebaseio.com/");
 
